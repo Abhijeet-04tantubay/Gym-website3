@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Memberships</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      header {
+        background-color: #694100;
+        padding: 1em;
+        text-align: center;
+        color: white;
+      }
+
+      section {
+        display: flex;
+        justify-content: space-around;
+        padding: 2em;
+      }
+
+      .pricing-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1em;
+        height: 300px;
+        width: 400px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+        margin: 1em;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .pricing-card:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+
+      .pricing-card h2 {
+        color: #6c4706;
+        font-size: 2.2rem;
+      }
+
+      .pricing-card p {
+        color: #777;
+      }
+
+      .pricing-card .price {
+        font-size: 1.9em;
+        color: #333;
+        margin: 1em 0;
+      }
+
+      .pricing-card button {
+        background-color: #f69c00;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .ad {
+        height: 60px;
+        width: 100%;
+        background-color: crimson;
+        font-size: 2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gym Memberships</h1>
+    </header>
+
+    <section>
+      <div class="pricing-card">
+        <h2>Basic</h2>
+        <p>Access to basic facilities</p>
+        <div class="price">$30/month</div>
+        <button>Choose Plan</button>
+      </div>
+
+      <div class="pricing-card">
+        <h2>Standard</h2>
+        <p>Full access to all classes</p>
+        <div class="price">$50/month</div>
+        <button>Choose Plan</button>
+      </div>
+
+      <div class="pricing-card">
+        <h2>Premium</h2>
+        <p>Personal trainer included</p>
+        <div class="price">$80/month</div>
+        <button>Choose Plan</button>
+      </div>
+    </section>
+
+    <video width="1500" height="240" controls autoplay loop>
+      <source
+        src="WhatsApp Video 2023-11-10 at 6.40.07 PM.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div class="ad">
+      <z>30% discount join now</z>
+    </div>
+  </body>
+</html>

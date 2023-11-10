@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discount Ad Slider</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      header {
+        background-color: #4caf50;
+        padding: 1em;
+        text-align: center;
+        color: white;
+      }
+
+      #slider-container {
+        max-width: 600px;
+        margin: 2em auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slide {
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      .slide img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .discount-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 1.5em;
+      }
+
+      .controls {
+        text-align: center;
+        margin-top: 1em;
+      }
+
+      .control-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Discount Ad Slider</h1>
+    </header>
+
+    <div id="slider-container">
+      <div class="slide">
+        <img src="discount1.jpg" alt="Discount 1" />
+        <div class="discount-text">Save 20% on Annual Memberships!</div>
+      </div>
+      <div class="slide">
+        <img src="discount2.jpg" alt="Discount 2" />
+        <div class="discount-text">
+          Limited-time Offer: 50% off your first month!
+        </div>
+      </div>
+      <!-- Add more slides as needed -->
+
+      <div class="controls">
+        <button class="control-btn" onclick="prevSlide()">Previous</button>
+        <button class="control-btn" onclick="nextSlide()">Next</button>
+      </div>
+    </div>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.display = i === index ? "block" : "none";
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Show the first slide initially
+      showSlide(currentSlide);
+    </script>
+  </body>
+</html>
